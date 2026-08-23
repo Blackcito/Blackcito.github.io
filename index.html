@@ -17,16 +17,19 @@
   <header class="nav">
     <div class="container nav-inner">
       <div class="nav-logo">Blackcito<span>.dev</span></div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#tesis">Tesis</a></li>
-        <li><a href="#formacion">Formación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
+          <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+          <li><a href="#tesis" data-i18n="nav.thesis">Tesis</a></li>
+          <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
+          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button class="lang-toggle" id="langToggle" data-i18n-aria="nav.lang" aria-label="Cambiar idioma">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" data-i18n-aria="nav.menu">☰</button>
+      </div>
     </div>
   </header>
 
@@ -34,18 +37,26 @@
     <section class="hero">
       <div class="container">
         <div class="avatar" aria-hidden="true">JMA</div>
-        <span class="hero-badge"><span class="dot"></span> Disponibilidad inmediata</span>
+        <span class="hero-badge"><span class="dot"></span> <span data-i18n="hero.badge">Disponibilidad inmediata</span></span>
         <h1>José Miguel<br /><span class="grad">Alderete López</span></h1>
-        <p class="subtitle">Ingeniero Civil en Informática · Mención TI</p>
+        <p class="subtitle" data-i18n="hero.subtitle">Ingeniero Civil en Informática · Mención TI</p>
         <p class="aka">aka <span class="grad">Blackcito</span></p>
-        <p class="desc">
+        <p class="desc" data-i18n="hero.desc">
           Perfil híbrido en tres pilares: Ciencia de Datos e IA, Ingeniería de Datos e
           Infraestructura / DevOps. Construyo soluciones de extremo a extremo: del dato
           a la infraestructura cloud-native.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#proyectos">Ver proyectos ↓</a>
-          <a class="btn btn-ghost" href="#contacto">Contactar</a>
+          <a class="btn btn-primary" href="#proyectos" data-i18n="hero.btnProjects">Ver proyectos ↓</a>
+          <a class="btn btn-ghost" id="cvBtn" href="assets/documentos/JoseAlderete_esp.pdf" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-i18n="hero.btnCV">Descargar CV</span>
+          </a>
+          <a class="btn btn-ghost" href="#contacto" data-i18n="hero.btnContact">Contactar</a>
         </div>
       </div>
     </section>
@@ -53,13 +64,13 @@
     <section id="sobre-mi">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">01 · Sobre mí</span>
-          <h2>Perfil profesional</h2>
+          <span class="kicker" data-i18n="about.kicker">01 · Sobre mí</span>
+          <h2 data-i18n="about.h2">Perfil profesional</h2>
         </div>
         <div class="about-grid">
           <div class="about-card reveal">
-            <h3>Resumen</h3>
-            <p>
+            <h3 data-i18n="about.summaryTitle">Resumen</h3>
+            <p data-i18n="about.summaryText">
               Ingeniero Civil en Informática (Mención TI) con un perfil híbrido en tres
               pilares: <b>Ciencia de Datos e IA</b> (modelado neuro-difuso, simulación, R),
               <b>Ingeniería de Datos</b> (pipelines de streaming, ETL, MariaDB/Redis) e
@@ -70,12 +81,12 @@
             </p>
           </div>
           <div class="about-card reveal">
-            <h3>Datos rápidos</h3>
+            <h3 data-i18n="about.factsTitle">Datos rápidos</h3>
             <ul class="about-facts">
-              <li><b>Disponibilidad</b> — Inmediata.</li>
-              <li><b>Idiomas</b> — Español (nativo) · Inglés (C2 Proficient).</li>
-              <li><b>Enfoque</b> — IA explicable, datos en tiempo real e infraestructura como código.</li>
-              <li><b>Formación</b> — Titulado, trabajo de título centrado en IA (ANFIS).</li>
+              <li data-i18n="about.fact1"><b>Disponibilidad</b> — Inmediata.</li>
+              <li data-i18n="about.fact2"><b>Idiomas</b> — Español (nativo) · Inglés (C2 Proficient).</li>
+              <li data-i18n="about.fact3"><b>Enfoque</b> — IA explicable, datos en tiempo real e infraestructura como código.</li>
+              <li data-i18n="about.fact4"><b>Formación</b> — Titulado, trabajo de título centrado en IA (ANFIS).</li>
             </ul>
           </div>
         </div>
@@ -85,8 +96,8 @@
     <section id="experiencia">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">02 · Experiencia</span>
-          <h2>Experiencia laboral</h2>
+          <span class="kicker" data-i18n="exp.kicker">02 · Experiencia</span>
+          <h2 data-i18n="exp.h2">Experiencia laboral</h2>
         </div>
         <div class="timeline reveal">
 
@@ -97,14 +108,14 @@
                 <h3>Colchones Rosen</h3>
                 <span class="timeline-date">Jul 2025 — Oct 2025</span>
               </div>
-              <p class="timeline-role">Practicante en Análisis de Datos · Temuco, Chile</p>
+              <p class="timeline-role" data-i18n="exp.role1">Practicante en Análisis de Datos</p>
               <ul class="timeline-list">
-                <li>Desarrollo de un sistema de procesamiento en tiempo real para integrar datos de múltiples fuentes (controladores de equipo, scanners y transportadores).</li>
-                <li>Pipeline ETL con correlación temporal de eventos y cálculo de métricas operacionales (tiempos de ciclo, eficiencia y esperas).</li>
-                <li>Diseño de módulos de analítica para estadísticas diarias, por operador, producto y proceso detallado.</li>
-                <li>Administración de MariaDB y optimización de consultas con CTEs y operaciones batch.</li>
-                <li>Gestión de estado con recuperación automática ante fallos (idempotencia).</li>
-                <li>Visualización de KPIs mediante Grafana y scripts de consultas SQL.</li>
+                <li data-i18n="exp.r1">Desarrollo de un sistema de procesamiento en tiempo real para integrar datos de múltiples fuentes (controladores de equipo, scanners y transportadores).</li>
+                <li data-i18n="exp.r2">Pipeline ETL con correlación temporal de eventos y cálculo de métricas operacionales (tiempos de ciclo, eficiencia y esperas).</li>
+                <li data-i18n="exp.r3">Diseño de módulos de analítica para estadísticas diarias, por operador, producto y proceso detallado.</li>
+                <li data-i18n="exp.r4">Administración de MariaDB y optimización de consultas con CTEs y operaciones batch.</li>
+                <li data-i18n="exp.r5">Gestión de estado con recuperación automática ante fallos (idempotencia).</li>
+                <li data-i18n="exp.r6">Visualización de KPIs mediante Grafana y scripts de consultas SQL.</li>
               </ul>
             </div>
           </div>
@@ -116,10 +127,10 @@
                 <h3>Universidad Católica de Temuco</h3>
                 <span class="timeline-date">Oct 2023 — Dic 2023</span>
               </div>
-              <p class="timeline-role">Analista de Datos (Práctica Inicial) · Temuco, Chile</p>
+              <p class="timeline-role" data-i18n="exp.role2">Analista de Datos (Práctica Inicial)</p>
               <ul class="timeline-list">
-                <li>Limpieza, procesamiento y modelamiento de datos.</li>
-                <li>Manejo de bases de datos y visualización en Tableau.</li>
+                <li data-i18n="exp.u1">Limpieza, procesamiento y modelamiento de datos.</li>
+                <li data-i18n="exp.u2">Manejo de bases de datos y visualización en Tableau.</li>
               </ul>
             </div>
           </div>
@@ -131,24 +142,24 @@
     <section id="proyectos">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">03 · Proyectos</span>
-          <h2>Trabajo destacado</h2>
+          <span class="kicker" data-i18n="projects.kicker">03 · Proyectos</span>
+          <h2 data-i18n="projects.h2">Trabajo destacado</h2>
         </div>
         <div class="projects">
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="assets/Imagenes/ANFIS/gui_anfis.webp" alt="Interfaz gráfica de la aplicación ANFIS" loading="lazy" />
-              <img src="assets/Imagenes/ANFIS/Evaluacion_ANFIS.webp" alt="Evaluación y métricas del modelo ANFIS" loading="lazy" />
+              <img src="assets/Imagenes/ANFIS/gui_anfis.webp" alt="Interfaz gráfica de la aplicación ANFIS" data-i18n-alt="alt.anfis.gui" loading="lazy" />
+              <img src="assets/Imagenes/ANFIS/Evaluacion_ANFIS.webp" alt="Evaluación y métricas del modelo ANFIS" data-i18n-alt="alt.anfis.eval" loading="lazy" />
               <span class="project-media__zoom">&#8635;</span>
             </div>
             <div class="project-top">
               <span class="project-cat">Machine Learning</span>
-              <a class="gh" href="https://github.com/Blackcito/ANFIS" target="_blank" rel="noopener" aria-label="ANFIS en GitHub">&#8599;</a>
+              <a class="gh" href="https://github.com/Blackcito/ANFIS" target="_blank" rel="noopener" aria-label="ANFIS en GitHub" data-i18n-aria="gh.anfis">&#8599;</a>
             </div>
-            <h3>ANFIS — Detección de Tumores Cerebrales</h3>
-            <span class="project-period">2023 — 2025 · Trabajo de Título</span>
-            <p>
+            <h3 data-i18n="proj.anfis.title">ANFIS — Detección de Tumores Cerebrales</h3>
+            <span class="project-period" data-i18n="proj.anfis.period">2023 — 2025 · Trabajo de Título</span>
+            <p data-i18n="proj.anfis.desc">
               Clasificación binaria explicable de imágenes MRI mediante un sistema
               neuro-difuso ANFIS-Sugeno de 6 capas implementado desde cero y entrenado
               con PSO + mínimos cuadrados (LSE). Incluye preprocesamiento de imágenes,
@@ -158,17 +169,17 @@
               <span class="tag">Python</span><span class="tag">ANFIS</span><span class="tag">PSO</span>
               <span class="tag">OpenCV</span><span class="tag">GLCM</span><span class="tag">Tkinter</span>
             </div>
-            <a class="project-link" href="https://github.com/Blackcito/ANFIS" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a class="project-link" href="https://github.com/Blackcito/ANFIS" target="_blank" rel="noopener" data-i18n="proj.viewRepo">Ver repositorio →</a>
           </article>
 
           <article class="project reveal">
             <div class="project-top">
               <span class="project-cat">Data Engineering</span>
-              <a class="gh" href="https://github.com/Blackcito/industrial-process-analytics-system" target="_blank" rel="noopener" aria-label="Industrial Analytics en GitHub">&#8599;</a>
+              <a class="gh" href="https://github.com/Blackcito/industrial-process-analytics-system" target="_blank" rel="noopener" aria-label="Industrial Analytics en GitHub" data-i18n-aria="gh.ind">&#8599;</a>
             </div>
-            <h3>Industrial Process Analytics System</h3>
-            <span class="project-period">2024 — 2025</span>
-            <p>
+            <h3 data-i18n="proj.ind.title">Industrial Process Analytics System</h3>
+            <span class="project-period" data-i18n="proj.ind.period">2024 — 2025</span>
+            <p data-i18n="proj.ind.desc">
               Pipeline de procesamiento continuo dirigido por eventos (Redis pub/sub) para
               monitoreo de manufactura en tiempo real. Correlaciona PLC, escáneres y cinta
               transportadora para calcular ciclos, eficiencia y esperas, con estado
@@ -178,21 +189,21 @@
               <span class="tag">Python</span><span class="tag">MariaDB</span><span class="tag">Redis</span>
               <span class="tag">ETL</span><span class="tag">SQL</span>
             </div>
-            <a class="project-link" href="https://github.com/Blackcito/industrial-process-analytics-system" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a class="project-link" href="https://github.com/Blackcito/industrial-process-analytics-system" target="_blank" rel="noopener" data-i18n="proj.viewRepo">Ver repositorio →</a>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="assets/Imagenes/KUBER_HA/kuber_HA.webp" alt="Diagrama de arquitectura HA del clúster Kubernetes" loading="lazy" />
+              <img src="assets/Imagenes/KUBER_HA/kuber_HA.webp" alt="Diagrama de arquitectura HA del clúster Kubernetes" data-i18n-alt="alt.kub" loading="lazy" />
               <span class="project-media__zoom">&#8635;</span>
             </div>
             <div class="project-top">
               <span class="project-cat">DevOps</span>
-              <a class="gh" href="https://github.com/Blackcito/Kuber_HA" target="_blank" rel="noopener" aria-label="Kuber_HA en GitHub">&#8599;</a>
+              <a class="gh" href="https://github.com/Blackcito/Kuber_HA" target="_blank" rel="noopener" aria-label="Kuber_HA en GitHub" data-i18n-aria="gh.kub">&#8599;</a>
             </div>
-            <h3>Kuber_HA — Clúster Kubernetes HA</h3>
-            <span class="project-period">2024</span>
-            <p>
+            <h3 data-i18n="proj.kub.title">Kuber_HA — Clúster Kubernetes HA</h3>
+            <span class="project-period" data-i18n="proj.kub.period">2024</span>
+            <p data-i18n="proj.kub.desc">
               Aprovisionamiento automatizado (IaC) de un clúster Kubernetes de alta
               disponibilidad: 3 control-planes, balanceo activo/pasivo con HAProxy +
               Keepalived (VRRP), almacenamiento distribuido Longhorn y orquestación por
@@ -202,23 +213,23 @@
               <span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Ansible</span>
               <span class="tag">HAProxy</span><span class="tag">Longhorn</span>
             </div>
-            <a class="project-link" href="https://github.com/Blackcito/Kuber_HA" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a class="project-link" href="https://github.com/Blackcito/Kuber_HA" target="_blank" rel="noopener" data-i18n="proj.viewRepo">Ver repositorio →</a>
           </article>
 
           <article class="project reveal">
             <div class="project-media">
-              <img src="assets/Imagenes/incendio/Agentes.webp" alt="Simulación de la grilla de agentes del incendio forestal" loading="lazy" />
-              <img src="assets/Imagenes/incendio/Evolucion_celdas.webp" alt="Evolución de las celdas a lo largo de la simulación" loading="lazy" />
-              <img src="assets/Imagenes/incendio/Paso_100.webp" alt="Estado del bosque en el paso 100 de la simulación" loading="lazy" />
+              <img src="assets/Imagenes/incendio/Agentes.webp" alt="Simulación de la grilla de agentes del incendio forestal" data-i18n-alt="alt.inc.a" loading="lazy" />
+              <img src="assets/Imagenes/incendio/Evolucion_celdas.webp" alt="Evolución de las celdas a lo largo de la simulación" data-i18n-alt="alt.inc.b" loading="lazy" />
+              <img src="assets/Imagenes/incendio/Paso_100.webp" alt="Estado del bosque en el paso 100 de la simulación" data-i18n-alt="alt.inc.c" loading="lazy" />
               <span class="project-media__zoom">&#8635;</span>
             </div>
             <div class="project-top">
-              <span class="project-cat">Simulación</span>
-              <a class="gh" href="https://github.com/Blackcito/Simulacion-Incendio-forestal-R" target="_blank" rel="noopener" aria-label="Simulación de incendio en GitHub">&#8599;</a>
+              <span class="project-cat" data-i18n="proj.catSim">Simulación</span>
+              <a class="gh" href="https://github.com/Blackcito/Simulacion-Incendio-forestal-R" target="_blank" rel="noopener" aria-label="Simulación de incendio en GitHub" data-i18n-aria="gh.inc">&#8599;</a>
             </div>
-            <h3>Simulación de Incendio Forestal con Agentes</h3>
-            <span class="project-period">2024</span>
-            <p>
+            <h3 data-i18n="proj.inc.title">Simulación de Incendio Forestal con Agentes</h3>
+            <span class="project-period" data-i18n="proj.inc.period">2024</span>
+            <p data-i18n="proj.inc.desc">
               Modelo multi-agente (ABM) en R sobre una grilla 50×50 que simula la
               propagación estocástica de incendios influenciada por el clima, con
               guardabosques (clases S4) que detectan, limpian y apagan focos bajo un
@@ -226,28 +237,28 @@
             </p>
             <div class="project-tags">
               <span class="tag">R</span><span class="tag">S4</span><span class="tag">ABM</span>
-              <span class="tag">ggplot2</span><span class="tag">Estocástico</span>
+              <span class="tag">ggplot2</span><span class="tag" data-i18n="proj.inc.tagStoch">Estocástico</span>
             </div>
-            <a class="project-link" href="https://github.com/Blackcito/Simulacion-Incendio-forestal-R" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a class="project-link" href="https://github.com/Blackcito/Simulacion-Incendio-forestal-R" target="_blank" rel="noopener" data-i18n="proj.viewRepo">Ver repositorio →</a>
           </article>
 
           <article class="project reveal">
             <div class="project-top">
-              <span class="project-cat">Optimización</span>
-              <a class="gh" href="https://github.com/Blackcito/Algoritmo_genetico" target="_blank" rel="noopener" aria-label="Algoritmo genético en GitHub">&#8599;</a>
+              <span class="project-cat" data-i18n="proj.catOpt">Optimización</span>
+              <a class="gh" href="https://github.com/Blackcito/Algoritmo_genetico" target="_blank" rel="noopener" aria-label="Algoritmo genético en GitHub" data-i18n-aria="gh.gen">&#8599;</a>
             </div>
-            <h3>Algoritmo Genético de Optimización</h3>
-            <p>
+            <h3 data-i18n="proj.gen.title">Algoritmo Genético de Optimización</h3>
+            <p data-i18n="proj.gen.desc">
               Simulación de un algoritmo genético en Python: una población evoluciona
               sobre una grilla con genes que codifican direcciones de movimiento y
               agresividad, aplicando selección, cruce y mutación. Visualiza la evolución
               de la aptitud a lo largo de las generaciones.
             </p>
             <div class="project-tags">
-              <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Algoritmos Genéticos</span>
+              <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag" data-i18n="proj.gen.tagGA">Algoritmos Genéticos</span>
               <span class="tag">Optimización</span>
             </div>
-            <a class="project-link" href="https://github.com/Blackcito/Algoritmo_genetico" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a class="project-link" href="https://github.com/Blackcito/Algoritmo_genetico" target="_blank" rel="noopener" data-i18n="proj.viewRepo">Ver repositorio →</a>
           </article>
 
         </div>
@@ -257,55 +268,55 @@
     <section id="habilidades">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">04 · Habilidades</span>
-          <h2>Stack tecnológico</h2>
+          <span class="kicker" data-i18n="skills.kicker">04 · Habilidades</span>
+          <h2 data-i18n="skills.h2">Stack tecnológico</h2>
         </div>
         <div class="reveal">
           <div class="skills-group">
-            <h3>Lenguajes</h3>
+            <h3 data-i18n="skills.lang">Lenguajes</h3>
             <div class="chips">
               <span class="chip">Python</span><span class="chip">R</span><span class="chip">SQL</span>
               <span class="chip">Bash</span><span class="chip">YAML</span><span class="chip">HCL (Terraform)</span><span class="chip">Jinja2</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>Machine Learning &amp; IA</h3>
+            <h3 data-i18n="skills.ml">Machine Learning &amp; IA</h3>
             <div class="chips">
-              <span class="chip">ANFIS</span><span class="chip">Lógica difusa</span><span class="chip">PSO</span>
-              <span class="chip">Algoritmos genéticos</span><span class="chip">scikit-learn</span><span class="chip">XAI</span>
+              <span class="chip">ANFIS</span><span class="chip" data-i18n="skills.fuzzy">Lógica difusa</span><span class="chip">PSO</span>
+              <span class="chip" data-i18n="skills.ga">Algoritmos genéticos</span><span class="chip">scikit-learn</span><span class="chip">XAI</span>
               <span class="chip">F1-score · AUC-ROC</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>Procesamiento de Imágenes</h3>
+            <h3 data-i18n="skills.img">Procesamiento de Imágenes</h3>
             <div class="chips">
               <span class="chip">OpenCV</span><span class="chip">scikit-image</span><span class="chip">GLCM</span>
-              <span class="chip">Segmentación adaptativa</span><span class="chip">CLAHE</span><span class="chip">Filtro bilateral</span><span class="chip">Morfología</span>
+              <span class="chip" data-i18n="skills.seg">Segmentación adaptativa</span><span class="chip">CLAHE</span><span class="chip" data-i18n="skills.bilateral">Filtro bilateral</span><span class="chip" data-i18n="skills.morph">Morfología</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>Análisis de Datos &amp; Simulación</h3>
+            <h3 data-i18n="skills.data">Análisis de Datos &amp; Simulación</h3>
             <div class="chips">
               <span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">SciPy</span>
               <span class="chip">ggplot2</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>Bases de Datos</h3>
+            <h3 data-i18n="skills.db">Bases de Datos</h3>
             <div class="chips">
               <span class="chip">MariaDB</span><span class="chip">MySQL</span><span class="chip">Redis (pub/sub)</span>
               <span class="chip">CTEs</span><span class="chip">Window Functions</span><span class="chip">Batch</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>Visualización</h3>
+            <h3 data-i18n="skills.viz">Visualización</h3>
             <div class="chips">
               <span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">ggplot2</span>
               <span class="chip">Grafana</span><span class="chip">Tableau</span><span class="chip">Power BI</span>
             </div>
           </div>
           <div class="skills-group">
-            <h3>DevOps &amp; Infraestructura</h3>
+            <h3 data-i18n="skills.devops">DevOps &amp; Infraestructura</h3>
             <div class="chips">
               <span class="chip">Kubernetes (HA)</span><span class="chip">Terraform</span><span class="chip">Ansible</span>
               <span class="chip">HAProxy</span><span class="chip">Keepalived</span><span class="chip">Longhorn</span>
@@ -313,9 +324,9 @@
             </div>
           </div>
           <div class="skills-group">
-            <h3>Desarrollo de Software</h3>
+            <h3 data-i18n="skills.sw">Desarrollo de Software</h3>
             <div class="chips">
-              <span class="chip">Arquitectura modular</span><span class="chip">Patrones de diseño</span>
+              <span class="chip" data-i18n="skills.modular">Arquitectura modular</span><span class="chip" data-i18n="skills.patterns">Patrones de diseño</span>
               <span class="chip">ETL</span><span class="chip">Event-driven</span><span class="chip">Context managers</span>
             </div>
           </div>
@@ -326,15 +337,15 @@
     <section id="tesis">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">05 · Tesis / Publicaciones</span>
-          <h2>Memoria de Título</h2>
+          <span class="kicker" data-i18n="thesis.kicker">05 · Tesis / Publicaciones</span>
+          <h2 data-i18n="thesis.h2">Memoria de Título</h2>
         </div>
         <div class="tesis-card reveal">
           <div class="tesis-icon" aria-hidden="true">▤</div>
           <div class="tesis-body">
-            <span class="project-cat">Investigación Académica</span>
-            <h3>Sistema ANFIS para Detección Automática de Tumores Cerebrales en Imágenes de Resonancia Magnética</h3>
-            <p>
+            <span class="project-cat" data-i18n="thesis.cat">Investigación Académica</span>
+            <h3 data-i18n="thesis.title">Sistema ANFIS para Detección Automática de Tumores Cerebrales en Imágenes de Resonancia Magnética</h3>
+            <p data-i18n="thesis.desc">
               Memoria de título en la que se desarrolla un sistema de clasificación
               binaria para la detección automática de tumores cerebrales en imágenes de
               resonancia magnética (MRI). El trabajo implementa un Sistema de Inferencia
@@ -354,7 +365,7 @@
                   <line x1="12" y1="18" x2="12" y2="12"></line>
                   <polyline points="9 15 12 18 15 15"></polyline>
                 </svg>
-                Leer / Descargar Tesis Completa
+                <span data-i18n="thesis.btn">Leer / Descargar Tesis Completa</span>
               </a>
             </div>
           </div>
@@ -365,16 +376,16 @@
     <section id="formacion">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">06 · Formación</span>
-          <h2>Estudios y Certificaciones</h2>
+          <span class="kicker" data-i18n="edu.kicker">06 · Formación</span>
+          <h2 data-i18n="edu.h2">Estudios y Certificaciones</h2>
         </div>
 
         <div class="edu-card reveal">
           <div class="edu-icon" aria-hidden="true">▣</div>
           <div class="edu-body">
-            <h3>Ingeniería Civil en Informática</h3>
-            <p class="edu-place">Universidad Católica de Temuco · Mención Tecnologías de la Información</p>
-            <span class="edu-date">Mar 2020 — May 2025 · Titulado</span>
+            <h3 data-i18n="edu.title">Ingeniería Civil en Informática</h3>
+            <p class="edu-place" data-i18n="edu.place">Universidad Católica de Temuco · Mención Tecnologías de la Información</p>
+            <span class="edu-date" data-i18n="edu.date">Mar 2020 — May 2025 · Titulado</span>
           </div>
         </div>
 
@@ -382,56 +393,56 @@
           <a class="cert-card reveal" href="https://cert.efset.org/en/4wtEwV" target="_blank" rel="noopener">
             <div class="cert-head">
               <span class="cert-badge">EF SET</span>
-              <span class="cert-link">Verificar ↗</span>
+              <span class="cert-link" data-i18n="cert.verify">Verificar ↗</span>
             </div>
-            <h4>English Certificate</h4>
-            <p>C2 Proficient · Puntuación 76/100</p>
+            <h4 data-i18n="cert.ef.title">English Certificate</h4>
+            <p data-i18n="cert.ef.desc">C2 Proficient · Puntuación 76/100</p>
           </a>
           <a class="cert-card reveal" href="https://www.asrcapacitacion.cl/verificar/fZZZEq8xKg" target="_blank" rel="noopener">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
-              <span class="cert-link">Verificar ↗</span>
+              <span class="cert-link" data-i18n="cert.verify">Verificar ↗</span>
             </div>
-            <h4>Python Intermedio / Avanzado</h4>
-            <p>Capacitación en programación Python</p>
+            <h4 data-i18n="cert.py1.title">Python Intermedio / Avanzado</h4>
+            <p data-i18n="cert.py1.desc">Capacitación en programación Python</p>
           </a>
           <a class="cert-card reveal" href="https://www.asrcapacitacion.cl/verificar/AOCfAbaTq8" target="_blank" rel="noopener">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
-              <span class="cert-link">Verificar ↗</span>
+              <span class="cert-link" data-i18n="cert.verify">Verificar ↗</span>
             </div>
-            <h4>Python Básico: Proceso de Datos</h4>
-            <p>Capacitación en procesamiento de datos con Python</p>
+            <h4 data-i18n="cert.py2.title">Python Básico: Proceso de Datos</h4>
+            <p data-i18n="cert.py2.desc">Capacitación en procesamiento de datos con Python</p>
           </a>
           <a class="cert-card reveal" href="https://www.asrcapacitacion.cl/verificar/YE6hLiOqGh" target="_blank" rel="noopener">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
-              <span class="cert-link">Verificar ↗</span>
+              <span class="cert-link" data-i18n="cert.verify">Verificar ↗</span>
             </div>
-            <h4>Power BI Básico</h4>
-            <p>Capacitación en visualización de datos</p>
+            <h4 data-i18n="cert.pbi1.title">Power BI Básico</h4>
+            <p data-i18n="cert.pbi1.desc">Capacitación en visualización de datos</p>
           </a>
           <a class="cert-card reveal" href="https://www.asrcapacitacion.cl/verificar/49e848c3dd2fb5c01289" target="_blank" rel="noopener">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
-              <span class="cert-link">Verificar ↗</span>
+              <span class="cert-link" data-i18n="cert.verify">Verificar ↗</span>
             </div>
-            <h4>Power BI Intermedio</h4>
-            <p>Capacitación en análisis y visualización de datos</p>
+            <h4 data-i18n="cert.pbi2.title">Power BI Intermedio</h4>
+            <p data-i18n="cert.pbi2.desc">Capacitación en análisis y visualización de datos</p>
           </a>
           <div class="cert-card reveal">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
             </div>
-            <h4>Power BI Avanzado</h4>
-            <p>Capacitación en análisis de datos · En curso</p>
+            <h4 data-i18n="cert.pbi3.title">Power BI Avanzado</h4>
+            <p data-i18n="cert.pbi3.desc">Capacitación en análisis de datos · En curso</p>
           </div>
           <div class="cert-card reveal">
             <div class="cert-head">
               <span class="cert-badge">ASR Capacitación</span>
             </div>
-            <h4>SAP ERP</h4>
-            <p>Capacitación en sistemas ERP · En curso</p>
+            <h4 data-i18n="cert.sap.title">SAP ERP</h4>
+            <p data-i18n="cert.sap.desc">Capacitación en sistemas ERP · En curso</p>
           </div>
         </div>
       </div>
@@ -440,8 +451,8 @@
     <section id="contacto">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">07 · Contacto</span>
-          <h2>Hablemos</h2>
+          <span class="kicker" data-i18n="contact.kicker">07 · Contacto</span>
+          <h2 data-i18n="contact.h2">Hablemos</h2>
         </div>
         <div class="contact-grid">
           <a class="contact-card reveal" href="mailto:jalderetelopez@gmail.com">
@@ -468,7 +479,7 @@
           <a class="contact-card reveal" href="tel:+56945889842">
             <div class="ico">☎</div>
             <div>
-              <div class="lbl">Teléfono</div>
+              <div class="lbl" data-i18n="contact.phone">Teléfono</div>
               <div class="val">+56 9 4588 9842</div>
             </div>
           </a>
@@ -479,21 +490,22 @@
 
   <footer>
     <div class="container">
-      © <span id="year"></span> José Miguel Alderete López · Construido con <span class="heart">♥</span> en GitHub Pages
+      © <span id="year"></span> <span data-i18n="footer.text">José Miguel Alderete López · Construido con <span class="heart">♥</span> en GitHub Pages</span>
     </div>
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visor de imágenes">
-    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
-    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visor de imágenes" data-i18n-aria="lb.dialog">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar" data-i18n-aria="lb.close">✕</button>
+    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Anterior" data-i18n-aria="lb.prev">‹</button>
     <figure class="lightbox__figure">
       <img class="lightbox__img" id="lightboxImg" src="" alt="" />
       <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
     </figure>
-    <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Siguiente">›</button>
+    <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Siguiente" data-i18n-aria="lb.next">›</button>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
